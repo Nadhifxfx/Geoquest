@@ -14,16 +14,16 @@ export default function About() {
             </div>
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Tentang Game</h1>
-          <p className="text-cyan-200">World Explorer Quiz: Discover the Globe</p>
+          <p className="text-cyan-200">Geoquest: Discover the Globe</p>
         </div>
 
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/20">
           <div className="flex items-start gap-4 mb-4">
             <BookOpen className="text-cyan-300 flex-shrink-0" size={24} />
             <div>
-              <h2 className="text-xl font-bold text-white mb-2">Apa itu World Explorer Quiz?</h2>
+              <h2 className="text-xl font-bold text-white mb-2">Apa itu Geoquest?</h2>
               <p className="text-slate-200 leading-relaxed">
-                World Explorer Quiz adalah game kuis interaktif yang mengajak Anda menjelajahi pengetahuan tentang benua-benua di dunia. Uji wawasan Anda tentang landmark terkenal, bendera negara, nama negara, dan kota-kota penting dari seluruh penjuru dunia!
+                Geoquest adalah game kuis interaktif yang mengajak Anda menjelajahi pengetahuan tentang benua-benua di dunia. Uji wawasan Anda tentang landmark terkenal, bendera negara, nama negara, dan kota-kota penting dari seluruh penjuru dunia!
               </p>
             </div>
           </div>
@@ -55,11 +55,7 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        <div className="text-center text-cyan-200 text-sm mt-8">
-          <p>© 2024 World Explorer Quiz. All rights reserved.</p>
-        </div>
+        </div>=
       </div>
-    </div>
-  );
+    );
 }
