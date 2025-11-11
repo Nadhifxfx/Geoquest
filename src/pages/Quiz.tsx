@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { quizData } from '../data/questions';
 import BackButton from '../components/BackButton';
-import { Trophy, Home } from 'lucide-react';
+import { Trophy, Home, Clock } from 'lucide-react';
 
 interface Question {
   q: string;
@@ -21,6 +21,7 @@ export default function Quiz() {
   const [showResult, setShowResult] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(60); // ⏳ 60 detik total waktu kuis
 
   useEffect(() => {
     if (continent && category) {
@@ -34,6 +35,24 @@ export default function Quiz() {
       }
     }
   }, [continent, category]);
+
+  // 🕒 Timer countdown
+  useEffect(() => {
+    if (quizCompleted || questions.length === 0) return;
+
+    if (timeLeft <= 0) {
+      // waktu habis, langsung kembali ke menu utama
+      alert("Waktu habis! Silakan coba lagi.");
+      navigate('/');
+      return;
+    }
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [timeLeft, quizCompleted, questions, navigate]);
 
   const playSound = (soundType: 'click' | 'correct' | 'wrong') => {
     const sfxEnabled = localStorage.getItem('sfxEnabled');
@@ -54,7 +73,7 @@ export default function Quiz() {
     const isCorrect = answer === questions[currentQuestion].answer;
 
     if (isCorrect) {
-      setScore(score + 1);
+      setScore((prev) => prev + 1);
       playSound('correct');
     } else {
       playSound('wrong');
@@ -62,7 +81,7 @@ export default function Quiz() {
 
     setTimeout(() => {
       if (currentQuestion < questions.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
+        setCurrentQuestion((prev) => prev + 1);
         setSelectedAnswer(null);
         setShowResult(false);
         setIsAnswered(false);
@@ -150,9 +169,12 @@ export default function Quiz() {
               Pertanyaan {currentQuestion + 1}/{questions.length}
             </span>
           </div>
-          <div className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
+
+          {/* ⏰ Timer di kanan atas */}
+          <div className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 flex items-center gap-2">
+            <Clock size={20} className="text-cyan-300" />
             <span className="text-white font-semibold">
-              Skor: {score}
+              {timeLeft}s
             </span>
           </div>
         </div>
@@ -164,18 +186,20 @@ export default function Quiz() {
 
           <div className="space-y-4">
             {question.options.map((option, index) => {
-              let buttonClass = "w-full p-4 rounded-xl text-left font-semibold text-lg transition-all duration-300 transform ";
+              let buttonClass =
+                'w-full p-4 rounded-xl text-left font-semibold text-lg transition-all duration-300 transform ';
 
               if (showResult) {
                 if (option === question.answer) {
-                  buttonClass += "bg-green-500 text-white scale-105 shadow-lg";
+                  buttonClass += 'bg-green-500 text-white scale-105 shadow-lg';
                 } else if (option === selectedAnswer) {
-                  buttonClass += "bg-red-500 text-white";
+                  buttonClass += 'bg-red-500 text-white';
                 } else {
-                  buttonClass += "bg-white/5 text-white/50";
+                  buttonClass += 'bg-white/5 text-white/50';
                 }
               } else {
-                buttonClass += "bg-white/10 hover:bg-white/20 text-white hover:scale-105 active:scale-95";
+                buttonClass +=
+                  'bg-white/10 hover:bg-white/20 text-white hover:scale-105 active:scale-95';
               }
 
               return (
