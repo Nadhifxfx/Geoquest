@@ -3,7 +3,7 @@ export const quizData = {
     Landmark: [
       {
         q: "Bangunan apa yang merupakan gedung tertinggi di dunia?",
-        options: ["Burj Khalifa", "Shanghai Tower", "Tokyo Skytree", "Petronas Towers"],
+        options: ["Shanghai Tower", "Tokyo Skytree", "Petronas Towers", "Burj Khalifa"],
         answer: "Burj Khalifa"
       },
       {
@@ -13,7 +13,7 @@ export const quizData = {
       },
       {
         q: "Mausoleum terkenal di India yang dibangun oleh Shah Jahan disebut apa?",
-        options: ["Taj Mahal", "Qutub Minar", "Red Fort", "Lotus Temple"],
+        options: ["Qutub Minar", "Taj Mahal", "Red Fort", "Lotus Temple"],
         answer: "Taj Mahal"
       },
       {
@@ -23,7 +23,7 @@ export const quizData = {
       },
       {
         q: "Gunung apa yang menjadi ikon paling terkenal di Jepang?",
-        options: ["Gunung Fuji", "Gunung Asama", "Gunung Tate", "Gunung Ontake"],
+        options: ["Gunung Tate", "Gunung Asama", "Gunung TateFuji", "Gunung Ontake"],
         answer: "Gunung Fuji"
       },
       {
@@ -38,12 +38,12 @@ export const quizData = {
       },
       {
         q: "Kota kuno di Yordania yang diukir di bebatuan merah disebut apa?",
-        options: ["Petra", "Jerash", "Amman Citadel", "Aqaba"],
+        options: ["Aqaba", "Jerash", "Amman Citadel", "Petra"],
         answer: "Petra"
       },
       {
         q: "Patung tertinggi di dunia yang terletak di India bernama apa?",
-        options: ["Statue of Unity", "Statue of Liberty", "Spring Temple Buddha", "Lord Murugan Statue"],
+        options: ["Statue of Buddha", "Statue of Liberty", "Spring Temple Unity", "Lord Murugan Statue"],
         answer: "Statue of Unity"
       },
       {
@@ -53,7 +53,7 @@ export const quizData = {
       },
       {
         q: "Kompleks candi kuno di Kamboja bernama apa?",
-        options: ["Angkor Wat", "Bayon Temple", "Ta Prohm", "Preah Vihear"],
+        options: ["Bayon Temple", "Angkor Wat", "Ta Prohm", "Preah Vihear"],
         answer: "Angkor Wat"
       },
       {
@@ -66,12 +66,12 @@ export const quizData = {
     Bendera: [
       {
         q: "Negara mana di Asia yang benderanya berwarna merah dan putih dengan titik merah di tengah?",
-        options: ["Jepang", "Indonesia", "Bangladesh", "Laos"],
+        options: ["Laos", "Indonesia", "Bangladesh", "Jepang"],
         answer: "Jepang"
       },
       {
         q: "Bendera negara mana yang memiliki lima bintang berwarna kuning di atas latar merah?",
-        options: ["Tiongkok", "Vietnam", "Singapura", "Korea Selatan"],
+        options: ["Malaysia", "Vietnam", "Singapura", "Tiongkok"],
         answer: "Tiongkok"
       },
       {
@@ -91,7 +91,7 @@ export const quizData = {
       },
       {
         q: "Negara mana yang memiliki bendera berwarna merah di atas dan putih di bawah?",
-        options: ["Indonesia", "Polandia", "Monako", "Singapura"],
+        options: ["Singapura", "India", "Monako", "Indonesia"],
         answer: "Indonesia"
       },
       {
@@ -116,12 +116,12 @@ export const quizData = {
       },
       {
         q: "Negara mana yang benderanya memiliki simbol yin-yang berwarna merah dan biru?",
-        options: ["Korea Selatan", "Korea Utara", "Mongolia", "Tiongkok"],
+        options: ["Tiongkok", "Korea Utara", "Mongolia", "Korea Selatan"],
         answer: "Korea Selatan"
       },
       {
         q: "Bendera negara mana yang menampilkan gambar roda biru dengan 24 jari-jari?",
-        options: ["India", "Bangladesh", "Pakistan", "Nepal"],
+        options: ["Pakistan", "Bangladesh", "India", "Nepal"],
         answer: "India"
       }
     ],
@@ -134,7 +134,7 @@ export const quizData = {
       },
       {
         q: "Negara mana yang memiliki luas wilayah terbesar di Asia?",
-        options: ["Rusia", "Tiongkok", "Kazakhstan", "Arab Saudi"],
+        options: ["Indonesia", "Rusia", "Tiongkok", "Arab Saudi"],
         answer: "Rusia"
       },
       {
@@ -144,7 +144,7 @@ export const quizData = {
       },
       {
         q: "Negara mana yang merupakan satu-satunya negara di Asia Tenggara yang tidak pernah dijajah?",
-        options: ["Thailand", "Malaysia", "Indonesia", "Vietnam"],
+        options: ["Malaysia", "Thailand", "Indonesia", "Vietnam"],
         answer: "Thailand"
       },
       {
@@ -154,12 +154,12 @@ export const quizData = {
       },
       {
         q: "Negara mana yang merupakan penghasil minyak terbesar di Asia?",
-        options: ["Arab Saudi", "Iran", "Irak", "Uni Emirat Arab"],
+        options: ["Uni Emirat Arab", "Iran", "Irak", "Arab Saudi"],
         answer: "Arab Saudi"
       },
       {
         q: "Negara mana yang dikenal dengan sistem kastanya dan Sungai Gangga?",
-        options: ["India", "Bangladesh", "Nepal", "Sri Lanka"],
+        options: ["Nepal", "Bangladesh", "India", "Sri Lanka"],
         answer: "India"
       },
       {
@@ -169,12 +169,12 @@ export const quizData = {
       },
       {
         q: "Negara mana yang terletak di antara Tiongkok dan India?",
-        options: ["Nepal", "Bhutan", "Bangladesh", "Myanmar"],
+        options: ["Myanmar", "Bhutan", "Bangladesh", "Nepal"],
         answer: "Nepal"
       },
       {
         q: "Negara mana yang dikenal sebagai 'Negeri Seribu Pagoda'?",
-        options: ["Myanmar", "Thailand", "Kamboja", "Laos"],
+        options: ["Laos", "Thailand", "Kamboja", "Myanmar"],
         answer: "Myanmar"
       },
       {
@@ -184,7 +184,7 @@ export const quizData = {
       },
       {
         q: "Negara mana di Asia yang merupakan negara kepulauan terbesar di dunia?",
-        options: ["Indonesia", "Filipina", "Jepang", "Maladewa"],
+        options: ["Maladewa", "Filipina", "Jepang", "Indonesia"],
         answer: "Indonesia"
       }
     ],
@@ -197,17 +197,17 @@ export const quizData = {
       },
       {
         q: "Kota manakah yang merupakan ibu kota Tiongkok?",
-        options: ["Beijing", "Shanghai", "Guangzhou", "Shenzhen"],
+        options: ["Shanghai", "Beijing", "Guangzhou", "Shenzhen"],
         answer: "Beijing"
       },
       {
         q: "Kota mana yang dikenal dengan menara kembar Petronas?",
-        options: ["Kuala Lumpur", "Bangkok", "Singapura", "Jakarta"],
+        options: ["Singapura", "Bangkok", "Kuala Lumpur", "Jakarta"],
         answer: "Kuala Lumpur"
       },
       {
         q: "Kota mana yang menjadi pusat keuangan terbesar di Asia?",
-        options: ["Tokyo", "Hong Kong", "Singapura", "Shanghai"],
+        options: ["Seoul", "Hong Kong", "Tokyo", "Shanghai"],
         answer: "Tokyo"
       },
       {
