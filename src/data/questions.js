@@ -217,7 +217,7 @@ export const quizData = {
       },
       {
         q: "Kota mana yang menjadi pusat pemerintahan di India?",
-        options: ["New Delhi", "Mumbai", "Kolkata", "Bangalore"],
+        options: ["Kolkata", "Mumbai", "New Delhi", "Bangalore"],
         answer: "New Delhi"
       },
       {
